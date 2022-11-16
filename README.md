@@ -8,6 +8,39 @@ Some of the cookie cutter template features have been dropped out for
 simplicity.
 
 
+### Setup instructions
+
+1. Install DVC VSCode extension from the marketplace. For that, Inside your
+IDE, go to Extensions and search for DVC
+2. Clone this repository 
+
+3. Read the documentation and customize the ´dvc.yaml´ , ´params.yaml´ files.
+4. Open a terminal in VSCode
+
+
+### DVC Experiments
+------------
+
+Managing machine learning experiments can be challenging. The ultimate goal
+of DVC OpenSource extension is to make analysis, collaboration and reproducibility easier.
+
+With the extension , we are able to visualize experiments in the table and plots.
+
+For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines)
+We can use CLI or ´dvc.yaml´ file. Please refer [here]() 
+for a template of how to build you own pipeline with DVC and [here]() to customize your parameters. 
+Visit [our community gem](https://iterative.ai/blog/august-22-community-gems#im-constructing-a-pipeline-with-several-stages-inside-the-dvcyaml-file) 
+as a common FAQ that might take place when executing you pipeline.
+
+For defining [metrics]() we use DVCLive python library. As a starting point we 
+will be using [log_metrics()]() and [sklearn_plots()]() methods to setup experiments
+
+For [experiments](), they can be executed from the CLI or the UI coming from
+the table. The main CLI command will be using  will [´dvc exp run´]()
+ and [´dvc repro´]() for CLI interface. 
+
+
+
 ### The resulting directory structure
 ------------
 
@@ -71,15 +104,5 @@ We welcome contributions! [See the docs for guidelines](https://drivendata.githu
     py.test tests
 
 
-### DVC 
-------------
 
-DVC Pipelines
-For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines)
-We can use CLI or ´dvc.yaml´ file. 
-
-For defining [metrics]()
-
-
-For [experiments]()
 
