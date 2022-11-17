@@ -22,16 +22,25 @@
 
 stages:
     load:
-        cmd: 
+        cmd: scr/data/makedataset.py
         params:
         outs:
 
-    normalization:
-        cmd:
+    featureengineering:
+        cmd: scr/data/makedataset.py
         params:
+        deps:
         outs:
     
     train:
-
+        cmd: scr/models/train_model.py
+        params:
+        deps:
+        outs:
+        metrics:    
 
     evaluate:
+        cmd: scr/models/predict_model.py
+        params:
+        deps:
+        outs:       
